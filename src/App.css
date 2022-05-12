@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: #111;
+}
+
+.movie_lis{
+    display: flex;
+    overflow-y:hidden;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+    padding: 1rem;
+    
+}
+.row_poster{
+    width: 100%;
+    object-fit: cover;
+    max-height: 20rem;
+    margin: 0.5rem;
+    transition: all 0.5s ;
+}
+.row_poster:hover{
+    transform: scale(1.08);
+    /* transition: all 0.5s ease-in-out;  */
+}
+
+
+.banner{
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    margin-bottom: 30px;
+}
+.banner_text_area{
+    position: absolute;
+    top: 200px;
+    left: 5rem;
+    max-width: 500px;
+    max-height: 200px;
+
+}
+.banner_text_area p{
+    font-size: 0.8rem;
+    max-height: 80px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
+.btn button{
+    padding: 5px 15px;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.btn button:hover{
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+}
+.blur{
+    height: 30px;
+    width: 98vw;
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.7));
+    position: relative;
+    bottom: -95%;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner{
+        height: 300px;
+    }
+    .banner_text_area{
+        position: absolute;
+        top: 2rem;
+        left: 50px;
+        max-width: 250px;
+    
+    }
+    .banner_text_area p{
+        font-size: 0.8rem;
+        max-height: 80px;
+        font-weight: bold;
+        line-height: 1.5rem;
+        
+    }
+}
+
+.movie_lis::-webkit-scrollbar{
+    display: none;
+}
